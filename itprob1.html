@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<title>openSol</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+        #myDIV {
+          width: 100%;
+          padding: 50px 0;
+          text-align: center;
+          display: none;
+          margin-top: 20px;
+        }
+
+        #myDIV2 {
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+          }
+      
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  
+  min-height: 50%;
+}
+
+.registrationclass{
+    background-position:center;
+    text-align:center;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="ApplicationPage.html" class="w3-bar-item w3-button w3-wide">openSol</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+        <a class="rs-select2 js-select-simple select--no-search">
+            <select  onchange="myFunction2(this)" id='selectOption' name="subject">
+                <option disabled="disabled" selected="selected">Choose option</option>
+                <option  value='ITAL'>IT</option>
+                <option value='CYBERAL'>CYBER</option>
+                <option  value='DATAAL'>DATA</option>
+                <option value='DESIGNAL'>DESIGN</option>
+            </select>
+            
+          </a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="ApplicationPage.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+      <a href="john.html" class="w3-bar-item w3-button">PROFILE</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="Login2.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> SIGN OUT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  
+  <a href="john.html" onclick="w3_close()" class="w3-bar-item w3-button">PROFILE</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="Login2.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> SIGN OUT</a>
+</nav>
+<script>
+
+    //var problemstat = localStorage.getItem("problemstat");
+    document.getElementById("probdes").innerText = localStorage.getItem("problemstat");;
+    //(function productsAdd() {
+     //  document.getElementById("productTable tbody").append(
+       //     "<tr>" +
+         //     "<td>"+ problemstat+ "</td>" +
+           //   
+            //"</tr>"
+        //);
+     // })();
+</script>
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-black" style="padding:48px">
+              
+                  <span class="w3-jumbo w3-hide-small">ORPHAN PETS</span><br>
+                  <P>We want to develop a website to maintain the repository of pets.
+                  </P>
+                  <p>SLA Days : 14</p>
+                  <p>Volunteers Needed : 5</p>
+                  <p> Volunteers</p>
+                  <ul id="myList">
+                        
+                  </ul>
+                  <p> Mentors</p>
+                  <ul id="myList2">
+                        
+                  </ul>
+                 
+    </div> 
+  </header>
+<div class="registrationclass">
+
+        <button  onclick="volunteer()" class="w3-button w3-black w3-round-xxlarge">Register as a Volunteer</button>
+        <button onclick="Mentor()"class="w3-button w3-black w3-round-xxlarge">Register as Mentor</button>
+</div>
+
+<div id="myDIV">
+        <div class="w3-card w3-round w3-white w3-hide-small">
+                <div class="w3-container">
+                  <p>Volunteer</p>
+                  <p>username</p><input type="text" name="finterest" id="interest">
+                  
+                  <button id= "button" onclick="interest()">Go</button>
+                </div>
+              </div>
+</div>
+
+<div id="myDIV2">
+        <div class="w3-card w3-round w3-white w3-hide-small">
+                <div class = "w3-container">
+                <p><strong>Mentor</strong></p>
+                <p>username</p><input type="text" name="finterest2" id="interest2">
+                
+                
+                  <button id= "button" onclick="interest2()">Go</button>
+                </div>
+              </div>
+</div>
+
+<div id="myDIV3">
+<p> Visit a member profiles</p>
+<input type="text" name="finterest3" id="interest3">
+<button id= "button" onclick="profiles()">Go</button>
+</div>
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+function myFunction2(obj) {
+  window.location = obj.value+".html";
+}
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+function volunteer() {
+    var x = document.getElementById("myDIV");
+    var y = document.getElementById("myDIV2");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.style.display = "none";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function Mentor() {
+    var x = document.getElementById("myDIV2");
+    var y = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.style.display = "none";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  var nameuser;
+  function interest() {
+
+    var node = document.createElement("LI");
+    nameuser = document.getElementById("interest").value;
+    
+    var textnode = document.createTextNode(nameuser);
+    
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+    
+  }
+var namementor
+  function interest2() {
+
+    var node = document.createElement("LI");
+    namementor = document.getElementById("interest2").value;
+   
+    var textnode = document.createTextNode(namementor);
+    node.appendChild(textnode);
+    document.getElementById("myList2").appendChild(node);
+   
+  }
+
+  function profiles() {
+
+    
+    var webpage = document.getElementById("interest3").value;
+   
+    window.location = webpage+".html";
+   
+  }
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
